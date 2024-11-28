@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www
+    ports:
+      - "9000:9000"
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - APP_KEY=base64:YBMEj/X4BxTlGyuLBEchfdlLIDCTGV0HRO1UnZn9Fpc=
+    networks:
+      - app-network
+    env_file:
+      - .env
+      
+
+networks:
+  app-network:
+    driver: bridge
