@@ -43,7 +43,7 @@
                         </div>
                         <div class="flex justify-between">
                             <x-primary-button type="submit">
-                                Add Car
+                                Add CarRRRRR
                             </x-primary-button>
                             <x-nav-link href="{{ route('cars.index') }}">
                                 Back to List
